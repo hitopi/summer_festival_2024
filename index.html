@@ -41,39 +41,34 @@
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
-            font-size: calc(4vw + 1em); /* フォントサイズを動的に設定 */
-            max-font-size: 64px; /* 最大サイズ */
+            font-size: clamp(24px, 8vw, 64px); /* フォントサイズをcontainerの幅に基づいて設定 */
         }
         .header .subtitle {
             margin-top: 10px;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
-            font-size: calc(2vw + 0.5em); /* フォントサイズを動的に設定 */
-            max-font-size: 24px; /* 最大サイズ */
+            font-size: clamp(12px, 3vw, 24px); /* フォントサイズをcontainerの幅に基づいて設定 */
         }
         .header .countdown {
             margin-top: 10px;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
-            font-size: calc(3vw + 0.75em); /* フォントサイズを動的に設定 */
-            max-font-size: 32px; /* 最大サイズ */
+            font-size: clamp(18px, 4vw, 32px); /* フォントサイズをcontainerの幅に基づいて設定 */
         }
 
         .section {
             margin-bottom: 30px;
         }
         .section h3 {
-            font-size: calc(1.5vw + 0.5em); /* フォントサイズを動的に設定 */
-            max-font-size: 18px; /* 最大サイズ */
+            font-size: clamp(12px, 2.5vw, 18px); /* フォントサイズをcontainerの幅に基づいて設定 */
             border-bottom: 2px solid #000;
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
         .section p {
-            font-size: calc(1.2vw + 0.4em); /* フォントサイズを動的に設定 */
-            max-font-size: 16px; /* 最大サイズ */
+            font-size: clamp(10px, 2vw, 16px); /* フォントサイズをcontainerの幅に基づいて設定 */
             line-height: 1.6;
         }
         .split {
@@ -88,8 +83,7 @@
             object-fit: cover;
         }
         .note {
-            font-size: calc(1.2vw + 0.4em); /* フォントサイズを動的に設定 */
-            max-font-size: 14px; /* 最大サイズ */
+            font-size: clamp(10px, 2vw, 14px); /* フォントサイズをcontainerの幅に基づいて設定 */
             color: red;
             font-weight: bold;
         }
