@@ -24,9 +24,9 @@
             text-align: center;
             color: white;
             background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
-            background-size: cover;  /* 画像全体が表示されるように */
-            background-position: center;  /* 画像が中央に表示されるように */
-            background-repeat: no-repeat; /* 背景画像が繰り返しされないように */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             min-height: 250px;
             border-radius: 10px 10px 0 0;
             display: flex;
@@ -35,21 +35,18 @@
             align-items: center;
             padding: 20px;
         }
-        .header .title, .header .subtitle, .header .countdown {
-            margin: 0;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            text-align: center;
-        }
         .header .title {
-            font-size: 64px; /* タイトルのフォントサイズを大きくしました */
+            font-size: 8vw; /* 画面幅の8%でサイズ調整 */
+            max-width: 64px; /* 最大サイズを設定 */
         }
         .header .subtitle {
-            font-size: 24px; /* サブタイトルのフォントサイズを少し大きくしました */
+            font-size: 4vw; /* 画面幅の4%でサイズ調整 */
+            max-width: 24px; /* 最大サイズを設定 */
             margin-top: 10px;
         }
         .header .countdown {
-            font-size: 32px; /* カウントダウンのフォントサイズも大きくしました */
+            font-size: 5vw; /* 画面幅の5%でサイズ調整 */
+            max-width: 32px; /* 最大サイズを設定 */
             margin-top: 10px;
         }
         .section {
@@ -67,19 +64,18 @@
         }
         .split {
             display: flex;
+            flex-direction: column; /* 縦方向に並べる */
             justify-content: space-between;
             align-items: center;
             margin-top: 10px;
         }
+        .split .text, .split .image {
+            width: 100%; /* 幅を100%に */
+            margin-bottom: 10px; /* 下に余白を追加 */
+        }
         .split img {
             max-width: 100%;
             height: auto;
-        }
-        .split .text {
-            width: 48%;
-        }
-        .split .image {
-            width: 48%;
         }
         .note {
             font-size: 14px;
