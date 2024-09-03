@@ -36,16 +36,16 @@
             padding: 20px;
         }
         .header .title {
-            font-size: 8vw; /* 画面幅の8%でサイズ調整 */
+            font-size: 8vw; /* 画面幅の8% */
             max-width: 64px; /* 最大サイズを設定 */
         }
         .header .subtitle {
-            font-size: 4vw; /* 画面幅の4%でサイズ調整 */
+            font-size: 4vw; /* 画面幅の4% */
             max-width: 24px; /* 最大サイズを設定 */
             margin-top: 10px;
         }
         .header .countdown {
-            font-size: 5vw; /* 画面幅の5%でサイズ調整 */
+            font-size: 5vw; /* 画面幅の5% */
             max-width: 32px; /* 最大サイズを設定 */
             margin-top: 10px;
         }
@@ -64,18 +64,19 @@
         }
         .split {
             display: flex;
-            flex-direction: column; /* 縦方向に並べる */
             justify-content: space-between;
             align-items: center;
             margin-top: 10px;
         }
-        .split .text, .split .image {
-            width: 100%; /* 幅を100%に */
-            margin-bottom: 10px; /* 下に余白を追加 */
-        }
         .split img {
             max-width: 100%;
             height: auto;
+        }
+        .split .text {
+            width: 48%;
+        }
+        .split .image {
+            width: 48%;
         }
         .note {
             font-size: 14px;
