@@ -73,14 +73,9 @@
             margin-top: 10px;
         }
         .split img {
-            max-width: 100%;
-            height: auto;
-        }
-        .split .text {
-            width: 48%;
-        }
-        .split .image {
-            width: 48%;
+            height: 150px; /* 画像の高さを統一 */
+            width: auto; /* 幅は自動調整 */
+            object-fit: cover; /* 画像が指定した高さをカバーするように設定 */
         }
         .note {
             font-size: 14px;
