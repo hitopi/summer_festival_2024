@@ -28,21 +28,21 @@
             background-position: center;
             min-height: 200px; /* タイトルテキストが表示される最低限の高さ */
             border-radius: 10px 10px 0 0;
+            padding: 20px;
         }
         .header h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: relative;
             font-size: 24px;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 文字が見やすくなるように影を追加 */
-            z-index: 2; /* テキストが背景画像の上に表示されるように */
+            margin: 0;
         }
-        h2 {
-            text-align: center;
+        .header h2 {
+            position: relative;
             font-size: 18px;
-            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 文字が見やすくなるように影を追加 */
+            margin: 10px 0 0 0;
         }
         .section {
             margin-bottom: 30px;
@@ -92,8 +92,8 @@
 <div class="container">
     <div class="header">
         <h1>納涼祭 まで あと<span id="countdown"></span>日</h1>
+        <h2>Michael Hoch 学長受賞お祝い会 × Summer Festival</h2>
     </div>
-    <h2>Michael Hoch 学長受賞お祝い会 × Summer Festival</h2>
 
     <div class="section">
         <h3>■ 参加フォームURL</h3>
