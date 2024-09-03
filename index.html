@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>納涼祭まであと〇〇日</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h3 {
+            font-size: 18px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .split {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .split img {
+            max-width: 100%;
+            height: auto;
+        }
+        .split .text {
+            width: 48%;
+        }
+        .split .image {
+            width: 48%;
+        }
+        .note {
+            font-size: 14px;
+            color: red;
+            font-weight: bold;
+        }
+        .center {
+            text-align: center;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>納涼祭 まで あと<span id="countdown"></span>日</h1>
+    <h2>Michael Hoch 学長受賞お祝い会 × Summer Festival</h2>
+
+    <div class="section">
+        <h3>■ 参加フォームURL：</h3>
+        <p><a href="https://your-form-url-here" target="_blank">こちらをクリックして参加フォームにアクセス</a></p>
+    </div>
+
+    <div class="section">
+        <h3>■ 参加費</h3>
+        <div class="split">
+            <div class="text">
+                <p>
+                    ・前売り券：500円（学生）<br>
+                    1000円（その他）<br><br>
+                    ・当日券：500円（学生）<br>
+                    1500円（その他）
+                </p>
+                <p class="note">浴衣など夏っぽい服装で参加 ▶ 参加費無料！</p>
+            </div>
+            <div class="image">
+                <img src="https://example.com/path-to-your-image/yukata.png" alt="浴衣で参加無料">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>■ イベント内容</h3>
+        <div class="split">
+            <div class="text">
+                <p>
+                    ・食事：お寿司、ピザ、中華、サラダ、唐揚げなど<br><br>
+                    ・出し物：流しそうめん、スーパーボールすくい、射的、スイカ割り、たこ焼き、わたあめなど
+                </p>
+                <p class="note">出し物によっては景品あるかも！</p>
+            </div>
+            <div class="image">
+                <img src="https://example.com/path-to-your-image/matsuri.png" alt="お祭りの様子">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // イベント開催日
+    const eventDate = new Date('2024-10-04');
+    const today = new Date();
+    
+    // 残り日数を計算
+    const timeDifference = eventDate - today;
+    const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    
+    // 残り日数を表示
+    document.getElementById('countdown').textContent = daysRemaining >= 0 ? daysRemaining : "0";
+</script>
+
+</body>
+</html>
