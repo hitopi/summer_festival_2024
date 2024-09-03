@@ -23,12 +23,16 @@
             position: relative;
             text-align: center;
             color: white;
+            background-color: #4a90e2; /* 背景画像が読み込まれない場合のフォールバックカラー */
+            min-height: 200px; /* タイトルテキストが表示される最低限の高さ */
+            border-radius: 10px 10px 0 0;
         }
         .header img {
             width: 100%;
             height: auto;
             border-radius: 10px 10px 0 0;
             display: block; /* 画像が見えない場合の対策 */
+            opacity: 0.8; /* 背景画像の透明度を調整してテキストを見やすくする */
         }
         .header h1 {
             position: absolute;
@@ -38,6 +42,7 @@
             font-size: 24px;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 文字が見やすくなるように影を追加 */
+            z-index: 2; /* テキストが背景画像の上に表示されるように */
         }
         h2 {
             text-align: center;
