@@ -24,8 +24,8 @@
             text-align: center;
             color: white;
             background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
-            background-size: contain;
-            background-position: center top;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             min-height: 250px;
             border-radius: 10px 10px 0 0;
@@ -36,34 +36,39 @@
             padding: 20px;
         }
 
-        .header .title, .header .subtitle, .header .countdown {
+        .header .title {
             margin: 0;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
-        }
-        .header .title {
-            font-size: 64px;
+            font-size: 6vw; /* タイトルのフォントサイズをビュー幅に基づいて設定 */
         }
         .header .subtitle {
-            font-size: 24px;
             margin-top: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            font-size: 3vw; /* サブタイトルのフォントサイズをビュー幅に基づいて設定 */
         }
         .header .countdown {
-            font-size: 32px;
             margin-top: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            font-size: 4vw; /* カウントダウンのフォントサイズをビュー幅に基づいて設定 */
         }
+
         .section {
             margin-bottom: 30px;
         }
         .section h3 {
-            font-size: 18px;
+            font-size: 2.5vw; /* セクションタイトルのフォントサイズをビュー幅に基づいて設定 */
             border-bottom: 2px solid #000;
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
         .section p {
-            font-size: 16px;
+            font-size: 2vw; /* セクション内容のフォントサイズをビュー幅に基づいて設定 */
             line-height: 1.6;
         }
         .split {
@@ -78,7 +83,7 @@
             object-fit: cover;
         }
         .note {
-            font-size: 14px;
+            font-size: 2vw; /* 注意書きのフォントサイズをビュー幅に基づいて設定 */
             color: red;
             font-weight: bold;
         }
@@ -90,25 +95,25 @@
             text-decoration: underline;
         }
 
-        /* デバイスの幅が600px以下の場合のスタイル */
+        /* メディアクエリで文字が大きすぎる場合に調整 */
         @media (max-width: 600px) {
             .header .title {
-                font-size: 48px; /* タイトルのフォントサイズを小さくする */
+                font-size: 8vw;
             }
             .header .subtitle {
-                font-size: 18px; /* サブタイトルのフォントサイズを小さくする */
+                font-size: 4vw;
             }
             .header .countdown {
-                font-size: 24px; /* カウントダウンのフォントサイズを小さくする */
+                font-size: 6vw;
             }
             .section h3 {
-                font-size: 16px; /* セクションタイトルのフォントサイズを小さくする */
+                font-size: 4vw;
             }
             .section p {
-                font-size: 14px; /* セクション内容のフォントサイズを小さくする */
+                font-size: 3vw;
             }
             .note {
-                font-size: 12px; /* 注意書きのフォントサイズを小さくする */
+                font-size: 3vw;
             }
         }
     </style>
