@@ -41,34 +41,39 @@
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
-            font-size: 6vw; /* タイトルのフォントサイズをビュー幅に基づいて設定 */
+            font-size: calc(4vw + 1em); /* フォントサイズを動的に設定 */
+            max-font-size: 64px; /* 最大サイズ */
         }
         .header .subtitle {
             margin-top: 10px;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
-            font-size: 3vw; /* サブタイトルのフォントサイズをビュー幅に基づいて設定 */
+            font-size: calc(2vw + 0.5em); /* フォントサイズを動的に設定 */
+            max-font-size: 24px; /* 最大サイズ */
         }
         .header .countdown {
             margin-top: 10px;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
-            font-size: 4vw; /* カウントダウンのフォントサイズをビュー幅に基づいて設定 */
+            font-size: calc(3vw + 0.75em); /* フォントサイズを動的に設定 */
+            max-font-size: 32px; /* 最大サイズ */
         }
 
         .section {
             margin-bottom: 30px;
         }
         .section h3 {
-            font-size: 2.5vw; /* セクションタイトルのフォントサイズをビュー幅に基づいて設定 */
+            font-size: calc(1.5vw + 0.5em); /* フォントサイズを動的に設定 */
+            max-font-size: 18px; /* 最大サイズ */
             border-bottom: 2px solid #000;
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
         .section p {
-            font-size: 2vw; /* セクション内容のフォントサイズをビュー幅に基づいて設定 */
+            font-size: calc(1.2vw + 0.4em); /* フォントサイズを動的に設定 */
+            max-font-size: 16px; /* 最大サイズ */
             line-height: 1.6;
         }
         .split {
@@ -83,7 +88,8 @@
             object-fit: cover;
         }
         .note {
-            font-size: 2vw; /* 注意書きのフォントサイズをビュー幅に基づいて設定 */
+            font-size: calc(1.2vw + 0.4em); /* フォントサイズを動的に設定 */
+            max-font-size: 14px; /* 最大サイズ */
             color: red;
             font-weight: bold;
         }
@@ -98,22 +104,22 @@
         /* メディアクエリで文字が大きすぎる場合に調整 */
         @media (max-width: 600px) {
             .header .title {
-                font-size: 8vw;
+                font-size: 48px;
             }
             .header .subtitle {
-                font-size: 4vw;
+                font-size: 18px;
             }
             .header .countdown {
-                font-size: 6vw;
+                font-size: 24px;
             }
             .section h3 {
-                font-size: 4vw;
+                font-size: 16px;
             }
             .section p {
-                font-size: 3vw;
+                font-size: 14px;
             }
             .note {
-                font-size: 3vw;
+                font-size: 12px;
             }
         }
     </style>
