@@ -24,8 +24,9 @@
             text-align: center;
             color: white;
             background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
-            background-size: cover;
-            background-position: center center;
+            background-size: cover;  /* 画像全体が表示されるように */
+            background-position: center;  /* 画像が中央に表示されるように */
+            background-repeat: no-repeat; /* 背景画像が繰り返しされないように */
             min-height: 250px;
             border-radius: 10px 10px 0 0;
             display: flex;
@@ -41,7 +42,7 @@
             text-align: center;
         }
         .header .title {
-            font-size: 56px; /* タイトルのフォントサイズを大きくしました */
+            font-size: 64px; /* タイトルのフォントサイズを大きくしました */
         }
         .header .subtitle {
             font-size: 24px; /* サブタイトルのフォントサイズを少し大きくしました */
