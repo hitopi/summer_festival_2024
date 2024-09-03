@@ -26,7 +26,7 @@
             background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
             background-size: cover;
             background-position: center;
-            min-height: 250px; /* タイトルテキストが表示される最低限の高さ */
+            min-height: 250px;
             border-radius: 10px 10px 0 0;
             display: flex;
             flex-direction: column;
@@ -34,19 +34,20 @@
             align-items: center;
             padding: 20px;
         }
-        .header h1, .header h2, .header h3 {
+        .header .title, .header .subtitle, .header .countdown {
             margin: 0;
             color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
         }
-        .header h1 {
+        .header .title {
             font-size: 28px;
         }
-        .header h2 {
+        .header .subtitle {
             font-size: 18px;
             margin-top: 5px;
         }
-        .header h3 {
+        .header .countdown {
             font-size: 24px;
             margin-top: 10px;
         }
@@ -97,9 +98,9 @@
 
 <div class="container">
     <div class="header">
-        <h1>10/4(金) 納涼祭</h1>
-        <h2>Michael Hoch 学長受賞お祝い会 × Summer Festival</h2>
-        <h3>まで あと<span id="countdown"></span>日</h3>
+        <div class="title">10/4(金) 納涼祭</div>
+        <div class="subtitle">Michael Hoch 学長受賞お祝い会 × Summer Festival</div>
+        <div class="countdown">まで あと<span id="countdown"></span>日</div>
     </div>
 
     <div class="section">
