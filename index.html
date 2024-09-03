@@ -24,9 +24,9 @@
             text-align: center;
             color: white;
             background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
-            background-size: contain;  /* 画像が全体に収まるように */
-            background-position: center top;  /* 画像が上部から中央に表示されるように */
-            background-repeat: no-repeat; /* 背景画像が繰り返しされないように */
+            background-size: contain;
+            background-position: center top;
+            background-repeat: no-repeat;
             min-height: 250px;
             border-radius: 10px 10px 0 0;
             display: flex;
@@ -43,14 +43,14 @@
             text-align: center;
         }
         .header .title {
-            font-size: 64px; /* タイトルのフォントサイズを大きくしました */
+            font-size: 64px;
         }
         .header .subtitle {
-            font-size: 24px; /* サブタイトルのフォントサイズを少し大きくしました */
+            font-size: 24px;
             margin-top: 10px;
         }
         .header .countdown {
-            font-size: 32px; /* カウントダウンのフォントサイズも大きくしました */
+            font-size: 32px;
             margin-top: 10px;
         }
         .section {
@@ -73,9 +73,9 @@
             margin-top: 10px;
         }
         .split img {
-            height: 150px; /* 画像の高さを統一 */
-            width: auto; /* 幅は自動調整 */
-            object-fit: cover; /* 画像が指定した高さをカバーするように設定 */
+            height: 150px;
+            width: auto;
+            object-fit: cover;
         }
         .note {
             font-size: 14px;
@@ -88,6 +88,28 @@
         a {
             color: blue;
             text-decoration: underline;
+        }
+
+        /* デバイスの幅が600px以下の場合のスタイル */
+        @media (max-width: 600px) {
+            .header .title {
+                font-size: 48px; /* タイトルのフォントサイズを小さくする */
+            }
+            .header .subtitle {
+                font-size: 18px; /* サブタイトルのフォントサイズを小さくする */
+            }
+            .header .countdown {
+                font-size: 24px; /* カウントダウンのフォントサイズを小さくする */
+            }
+            .section h3 {
+                font-size: 16px; /* セクションタイトルのフォントサイズを小さくする */
+            }
+            .section p {
+                font-size: 14px; /* セクション内容のフォントサイズを小さくする */
+            }
+            .note {
+                font-size: 12px; /* 注意書きのフォントサイズを小さくする */
+            }
         }
     </style>
 </head>
