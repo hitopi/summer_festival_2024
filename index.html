@@ -81,7 +81,7 @@
             overflow: hidden; /* 画像がコンテナを超えてはみ出ないように設定 */
         }
 
-        /* 参加費・イベント内容に背景画像が適用されないように、特定のクラス名を使わない */
+        /* 参加費・イベント内容の画像が正しく表示されるようにする */
         .split img {
             width: 100%; /* 幅を100%にして、コンテナ内に収める */
             height: auto; /* 高さは自動調整して、縦横比を維持 */
@@ -89,7 +89,7 @@
             object-fit: contain; /* 画像全体を表示 */
         }
 
-        /* 背景画像を設定するクラス */
+        /* グラデーションを左から右に適用するクラス */
         .image-first {
             position: absolute;
             top: 0;
@@ -206,10 +206,10 @@
         <div class="split">
             <div class="text">
                 <p>
-                    ①「Google Form」で参加登録<br><br>
-                    ②登録画面を受付に提示<br><br>
-                    ③支払い（受付の人に <span class="red-text">現金</span>で）<br><br>
-                    ④参加 ▶ 夏祭りを楽しむ！
+                     ①「Google Form」で参加登録<br><br>
+                     ②登録画面を受付に提示<br><br>
+                     ③支払い（受付の人に <span class="red-text">現金</span>で）<br><br>
+                     ④参加 ▶ 夏祭りを楽しむ！
                 </p>
             </div>
             <div class="image-second"></div> <!-- 2つ目の画像（過去の様子） -->
