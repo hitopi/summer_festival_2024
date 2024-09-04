@@ -207,13 +207,15 @@
         </div>
     </div>
 
-    <!-- 参加者状況のセクション追加 -->
+    <!-- 参加者状況のセクション -->
         <div class="section">
             <h3>■ 参加者状況</h3>
-            <div class="graph-container">
-                <!-- Googleスプレッドシートのグラフを埋め込む -->
-                <iframe src="https://docs.google.com/spreadsheets/d/17rvtPGZkUrvwv2toaWqAMr4Sukfq2olIPFkXkoGWRo4/pubchart?oid=64160653&format=interactive" 
-                width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="graph-container" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe 
+                    src="https://docs.google.com/spreadsheets/d/17rvtPGZkUrvwv2toaWqAMr4Sukfq2olIPFkXkoGWRo4/pubchart?oid=64160653&format=interactive"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
 
