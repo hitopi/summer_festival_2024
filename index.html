@@ -81,30 +81,45 @@
         overflow: hidden;
     }
 
+    .split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    position: relative; /* 親要素を相対配置 */
+    overflow: hidden; /* 画像がコンテナを超えてはみ出ないように設定 */
+    }
+    
+    /* 会場レイアウト用背景画像 */
     .image-first {
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 0;
+        z-index: 0; /* 背景画像をテキストの後ろに配置 */
         width: 100%;
         height: 100%;
-        max-height: 200px; /* 画像の最大高さを200pxに調整 */
         object-fit: cover;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
                     url('https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png') no-repeat center center / cover;
     }
     
+    /* 当日の流れ用背景画像 */
     .image-second {
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 0;
+        z-index: 0; /* 背景画像をテキストの後ろに配置 */
         width: 100%;
         height: 100%;
-        max-height: 200px; /* 画像の最大高さを200pxに調整 */
         object-fit: cover;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
                     url('https://github.com/hitopi/summer_festival_2024/raw/main/%E9%81%8E%E5%8E%BB.png') no-repeat center center / cover;
+    }
+    
+    .text {
+        position: relative;
+        z-index: 1; /* テキストを最前面に表示 */
+        padding: 10px;
     }
 
     .split img {
