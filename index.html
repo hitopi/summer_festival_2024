@@ -77,9 +77,19 @@
             align-items: center;
             margin-top: 10px;
         }
+        .split-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+        }
         .split img {
-            max-width: 50%; /* 親要素の幅の50%までに制限 */
-            max-height: 150px; /* 高さも最大150pxまでに制限 */
+            max-width: 80%; /* 親要素の幅の80% */
+            max-height: 200px; /* 高さは最大200pxまで */
+            height: auto; /* 高さは自動調整 */
+        }
+        .split-right img {
+            max-width: 50%; /* 親要素の幅の50%に制限 */
             height: auto; /* 高さは自動調整 */
         }
         .note {
@@ -151,7 +161,7 @@
 
     <div class="section">
         <h3>■ 会場</h3>
-        <div class="split">
+        <div class="split-right">
             <div class="text">
                 <p>
                     ・TWIns 2F ラウンジ<br><br>
@@ -167,7 +177,7 @@
 
     <div class="section">
         <h3>■ 当日の参加までの流れ</h3>
-        <div class="split">
+        <div class="split-right">
             <div class="text">
                 <p>
                     ①「Google Form」で参加登録<br><br>
