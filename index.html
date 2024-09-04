@@ -71,7 +71,7 @@
             font-size: clamp(10px, 2vw, 16px);
             line-height: 1.6;
         }
-        
+
         .split {
             display: flex;
             justify-content: space-between;
@@ -80,7 +80,8 @@
             position: relative; /* 親要素を相対配置 */
             overflow: hidden; /* 画像がコンテナを超えてはみ出ないように設定 */
         }
-        
+
+        /* 参加費・イベント内容に背景画像が適用されないように、特定のクラス名を使わない */
         .split img {
             width: 100%; /* 幅を100%にして、コンテナ内に収める */
             height: auto; /* 高さは自動調整して、縦横比を維持 */
@@ -88,16 +89,7 @@
             object-fit: contain; /* 画像全体を表示 */
         }
 
-         .image {
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 0;
-            opacity: 0.5;
-            width: 100%; /* 横幅を100%に調整して、コンテナ全体にフィット */
-            height: 100%; /* 高さもコンテナ全体に調整 */
-            object-fit: cover; /* 画像を全体に拡大し、縦横比を保持しつつ背景として表示 */
-        }
+        /* 背景画像を設定するクラス */
         .image-first {
             position: absolute;
             top: 0;
@@ -109,7 +101,7 @@
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%), 
                         url('https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png') no-repeat center center / cover;
         }
-        
+
         .image-second {
             position: absolute;
             top: 0;
@@ -121,7 +113,7 @@
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%), 
                         url('https://github.com/hitopi/summer_festival_2024/raw/main/%E9%81%8E%E5%8E%BB.png') no-repeat center center / cover;
         }
-        
+
         .text {
             position: relative;
             z-index: 1; /* テキストを最前面に配置 */
@@ -172,9 +164,7 @@
                 </p>
                 <p class="note">浴衣など夏っぽい服装で参加 ▶ 参加費無料！</p>
             </div>
-            <div class="image">
-                <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E6%B5%B4%E8%A1%A3%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88.png" alt="浴衣で参加無料">
-            </div>
+            <!-- ここに背景画像は不要 -->
         </div>
     </div>
 
@@ -189,9 +179,7 @@
                 </p>
                 <p class="note">( ﾟДﾟ)出し物によっては景品あるかも！</p>
             </div>
-            <div class="image">
-                <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E5%9B%B3.png" alt="お祭りの様子">
-            </div>
+            <!-- ここに背景画像は不要 -->
         </div>
     </div>
 
