@@ -80,8 +80,10 @@
         .split img {
             width: 100%; /* 幅を100%にして、コンテナ内に収める */
             height: auto; /* 高さは自動調整して、縦横比を維持 */
-            object-fit: contain; /* 画像全体を表示 */
+            max-height: 150px; /* 最大の高さを指定して、画像が途切れないように調整 */
+            object-fit: contain; /* 画像全体を表示させる */
         }
+
         .note {
             font-size: clamp(10px, 2vw, 14px);
             color: red;
