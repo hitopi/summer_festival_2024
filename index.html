@@ -5,138 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>納涼祭まであと〇〇日</title>
     <style>
-        body {
-            font-family: 'BIZ UDPゴシック', sans-serif;
-            margin: 20px;
-            background-color: #f7f7f7;
-        }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-        }
-        .header {
-            position: relative;
-            text-align: center;
-            color: white;
-            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 250px;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+    body {
+        font-family: 'BIZ UDPゴシック', sans-serif;
+        margin: 20px;
+        background-color: #f7f7f7;
+    }
+    .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+    }
+    .header {
+        position: relative;
+        text-align: center;
+        color: white;
+        background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 250px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
 
-        .header .title {
-            margin: 0;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            text-align: center;
-            font-size: clamp(24px, 8vw, 64px);
-        }
-        .header .subtitle {
-            margin-top: 10px;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            text-align: center;
-            font-size: clamp(12px, 3vw, 24px);
-        }
-        .header .countdown {
-            margin-top: 10px;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            text-align: center;
-            font-size: clamp(18px, 4vw, 32px);
-        }
+    .header .title {
+        margin: 0;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        font-size: clamp(24px, 8vw, 64px);
+    }
+    .header .subtitle {
+        margin-top: 10px;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        font-size: clamp(12px, 3vw, 24px);
+    }
+    .header .countdown {
+        margin-top: 10px;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        font-size: clamp(18px, 4vw, 32px);
+    }
 
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h3 {
-            font-size: clamp(12px, 2.5vw, 18px);
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .section p {
-            font-size: clamp(10px, 2vw, 16px);
-            line-height: 1.6;
-        }
+    .section {
+        margin-bottom: 30px;
+    }
+    .section h3 {
+        font-size: clamp(12px, 2.5vw, 18px);
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .section p {
+        font-size: clamp(10px, 2vw, 16px);
+        line-height: 1.6;
+    }
 
-        .split {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-            position: relative; /* 親要素を相対配置 */
-            overflow: hidden; /* 画像がコンテナを超えてはみ出ないように設定 */
-        }
+    .split {
+        position: relative;
+        width: 100%;
+        height: auto; /* 親要素の高さを自動調整 */
+        display: flex;
+        justify-content: flex-end; /* 画像を右端に揃える */
+        overflow: hidden;
+    }
 
-        /* 参加費・イベント内容の画像が正しく表示されるようにする */
-        .split img {
-            width: 100%; /* 幅を100%にして、コンテナ内に収める */
-            height: auto; /* 高さは自動調整して、縦横比を維持 */
-            max-height: 150px; /* 画像の最大高さを制限 */
-            object-fit: contain; /* 画像全体を表示 */
-        }
+    .image-first {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 200px; /* 画像の最大高さを200pxに調整 */
+        object-fit: cover;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
+                    url('https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png') no-repeat center center / cover;
+    }
+    
+    .image-second {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 200px; /* 画像の最大高さを200pxに調整 */
+        object-fit: cover;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
+                    url('https://github.com/hitopi/summer_festival_2024/raw/main/%E9%81%8E%E5%8E%BB.png') no-repeat center center / cover;
+    }
 
-        /* グラデーションを左から右に適用するクラス */
-        .image-first {
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
-                        url('https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png') no-repeat center center / cover;
-        }
+    .split img {
+        width: 100%; /* 幅を100%にして、コンテナ内に収める */
+        height: auto; /* 高さは自動調整して、縦横比を維持 */
+        max-height: 150px; /* 画像の最大高さを制限 */
+        object-fit: contain; /* 画像全体を表示 */
+    }
 
-        .image-second {
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), 
-                        url('https://github.com/hitopi/summer_festival_2024/raw/main/%E9%81%8E%E5%8E%BB.png') no-repeat center center / cover;
-        }
+    .text {
+        position: relative;
+        z-index: 1; /* テキストを最前面に配置 */
+        padding: 10px;
+    }
 
-        .text {
-            position: relative;
-            z-index: 1; /* テキストを最前面に配置 */
-            padding: 10px;
-        }
+    .note {
+        font-size: clamp(10px, 2vw, 14px);
+        color: red;
+        font-weight: bold;
+    }
 
-        .note {
-            font-size: clamp(10px, 2vw, 14px);
-            color: red;
-            font-weight: bold;
-        }
-        .center {
-            text-align: center;
-        }
-        a {
-            color: blue;
-            text-decoration: underline;
-        }
+    .center {
+        text-align: center;
+    }
 
-        .red-text {
-            color: red;
-        }
-    </style>
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .red-text {
+        color: red;
+    }
+</style>
+
 </head>
 <body>
 
