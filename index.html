@@ -87,8 +87,18 @@
             max-height: 150px; /* 画像の最大高さを制限 */
             object-fit: contain; /* 画像全体を表示 */
         }
-        
-        .image {
+
+         .image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
+            opacity: 0.5;
+            width: 100%; /* 横幅を100%に調整して、コンテナ全体にフィット */
+            height: 100%; /* 高さもコンテナ全体に調整 */
+            object-fit: cover; /* 画像を全体に拡大し、縦横比を保持しつつ背景として表示 */
+        }
+        .image-first {
             position: absolute;
             top: 0;
             right: 0;
@@ -195,7 +205,7 @@
                     ・当日レイアウト ▶ 右図
                 </p>
             </div>
-            <div class="image"></div> <!-- 1つ目の画像（会場レイアウト） -->
+            <div class="image-first"></div> <!-- 1つ目の画像（会場レイアウト） -->
         </div>
     </div>
     
