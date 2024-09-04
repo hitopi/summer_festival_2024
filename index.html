@@ -78,9 +78,8 @@
             margin-top: 10px;
         }
         .split img {
-            height: 150px;
-            width: auto;
-            object-fit: cover;
+            max-width: 100%; /* 横幅を親要素に合わせる */
+            height: auto; /* アスペクト比を維持 */
         }
         .note {
             font-size: clamp(10px, 2vw, 14px);
