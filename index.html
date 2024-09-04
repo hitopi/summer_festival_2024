@@ -73,12 +73,16 @@
         }
         .split {
             display: flex;
-            justify-content: space-between; /* テキストを左端、画像を右端に配置 */
+            justify-content: space-between;
             align-items: center;
             margin-top: 10px;
         }
+        .split .text {
+            flex-grow: 1; /* テキストエリアを最大に */
+        }
         .split img {
-            max-width: 50%; /* 画像の最大幅を50%に制限 */
+            max-width: 200px; /* 画像の最大幅を200pxに制限 */
+            margin-left: 20px; /* テキストとのスペースを確保 */
             height: auto; /* 高さは自動調整 */
         }
         .note {
