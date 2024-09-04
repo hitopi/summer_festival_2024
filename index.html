@@ -78,9 +78,9 @@
             margin-top: 10px;
         }
         .split img {
-            height: 150px;
-            width: auto;
-            object-fit: cover;
+            width: 100%; /* 幅を100%にして、コンテナ内に収める */
+            height: auto; /* 高さは自動調整して、縦横比を維持 */
+            object-fit: contain; /* 画像全体を表示 */
         }
         .note {
             font-size: clamp(10px, 2vw, 14px);
