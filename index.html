@@ -245,11 +245,9 @@
         @media (max-width: 600px) {
             .graph-container iframe {
                 width: 80%;  /* 親要素の80%の幅に合わせる */
-                min-width: 0; /* 最小幅をリセット */
                 height: auto;  /* 高さを自動調整 */
                 aspect-ratio: 16 / 9;  /* 縦横比を16:9で維持する */
-                margin-left: auto; /* 左側に自動で余白 */
-                margin-right: auto; /* 右側に自動で余白 */
+                margin: 0 auto;  /* グラフを中央に配置し、左右に均等な余白を確保 */
             }
         }
 
