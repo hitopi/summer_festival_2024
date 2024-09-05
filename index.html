@@ -158,15 +158,15 @@
         .square-image img {
             width: 100%; /* 画像の横幅を100%に設定 */
             max-height: 100px; /* スマホでは最大100pxに制限 */
-            box-shadow: 0 0 5px rgba(255, 223, 0, 0.6); /* 光のエフェクトを控えめに */
+            box-shadow: 0 0 5px rgba(255, 223, 0, 0.8); /* 光のエフェクトを控えめに */
         }
     }
     
     @media (min-width: 601px) and (max-width: 1199px) {
         .square-image img {
-            width: 100%; /* iPadサイズでも横幅を調整 */
+            width: auto; /* iPadサイズでも横幅を調整 */
             max-height: 130px; /* 中間サイズで画像の高さをやや縮小 */
-            box-shadow: 0 0 10px rgba(255, 223, 0, 0.7); /* 光のエフェクトを適度に調整 */
+            box-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* 光のエフェクトを適度に調整 */
         }
     }
 
