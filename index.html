@@ -235,6 +235,7 @@
             position: relative;
             z-index: 1;
             width: 100%;  /* 親要素の幅に合わせて100% */
+            min-width: 600px;  /* 最小幅を指定して十分なサイズに */
             height: 400px;  /* 高さは固定 */
             border: 0;
             overflow: hidden;
@@ -244,6 +245,7 @@
         @media (max-width: 600px) {
             .graph-container iframe {
                 width: 100%;  /* 親要素に幅を合わせる */
+                min-width: 0; /* 最小幅をリセットして100%に合わせる */
                 height: auto;  /* 高さを自動調整 */
                 aspect-ratio: 16 / 9;  /* グラフのアスペクト比を維持 */
             }
