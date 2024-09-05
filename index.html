@@ -144,13 +144,36 @@
         box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
     }
     
-    /* 四角の画像 */
+   /* 画像のスタイル */
     .square-image img {
-        width: 100%;
+        width: 100%; /* 画像を親要素にフィットさせる */
         height: auto;
-        max-height: 150px;
+        max-height: 150px; /* 画像の最大高さを設定 */
         object-fit: contain;
-        box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 四角のまま光のエフェクト */
+        box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* 光のエフェクト */
+        border-radius: 10px; /* 画像の角を丸める */
+        transition: box-shadow 0.3s ease; /* 滑らかなエフェクト変化 */
+    }
+    
+    /* 大きい画面向けのスタイル */
+    @media (min-width: 1200px) {
+        .square-image img {
+            box-shadow: 0 0 8px rgba(255, 223, 0, 0.5); /* 大きい画面でエフェクトを小さく */
+        }
+    }
+    
+    /* 中間サイズの画面向けのスタイル */
+    @media (min-width: 768px) and (max-width: 1199px) {
+        .square-image img {
+            box-shadow: 0 0 6px rgba(255, 223, 0, 0.4); /* 中間サイズでエフェクトをさらに調整 */
+        }
+    }
+    
+    /* 小さい画面向けのスタイル */
+    @media (max-width: 767px) {
+        .square-image img {
+            box-shadow: 0 0 5px rgba(255, 223, 0, 0.3); /* 小さい画面でエフェクトを小さく */
+        }
     }
     
     /* テキストのスタイル */
