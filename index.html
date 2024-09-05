@@ -134,12 +134,23 @@
         }
     
         /* 画像のスタイル */
-        .image img {
+        /* 円形の画像 */
+        .circle-image img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 50%; /* 画像を円形にする */
+            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
+        }
+        
+        /* 四角の画像 */
+        .square-image img {
             width: 100%;
             height: auto;
             max-height: 150px;
             object-fit: contain;
-            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 黄色の光のエフェクト */
+            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 四角のまま光のエフェクト */
         }
     
         /* テキストのスタイル */
@@ -210,7 +221,7 @@
                 </p>
                 <p class="note">浴衣など夏っぽい服装で参加 ▶ 参加費無料！</p>
             </div>
-            <div class="image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
+            <div class="circle-image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E6%B5%B4%E8%A1%A3%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%EF%BC%92.png" alt="浴衣で参加無料">
             </div>
         </div>
@@ -228,7 +239,7 @@
                 </p>
                 <p class="note">( ﾟДﾟ)出し物によっては景品あるかも！</p>
             </div>
-            <div class="image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
+            <div class="circle-image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E5%9B%B32.png" alt="お祭りの様子">
             </div>
         </div>
@@ -245,7 +256,7 @@
                     ・当日レイアウト ▶ 右図
                 </p>
             </div>
-            <div class="image" style="margin-right: 15px;"> <!-- 画像の位置を調整 -->
+            <div class="square-image" style="margin-right: 15px;"> <!-- 画像の位置を調整 -->
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png" alt="会場レイアウト">
             </div>
         </div>
@@ -263,7 +274,7 @@
                      ④ 参加 ▶ 夏祭りを楽しむ！
                 </p>
             </div>
-            <div class="image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
+            <div class="square-image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E9%81%8E%E5%8E%BB2.png" alt="当日の流れ">
             </div>
         </div>
