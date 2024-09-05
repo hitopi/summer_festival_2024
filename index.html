@@ -235,8 +235,8 @@
             position: relative;
             z-index: 1;
             width: 100%;  /* 親要素の幅に合わせて100% */
-            max-width: 100%; /* 横スクロールが出ないようにする */
-            height: auto;  /* 高さは自動調整 */
+            max-width: 600px; /* 横スクロールが出ないようにする */
+            height: 400px;  /* 高さは自動調整 */
             border: 0;
             overflow: hidden;
         }
@@ -252,8 +252,8 @@
         
         @media (max-width: 400px) {
             .graph-container iframe {
-                width: 100%; /* 幅に合わせて調整 */
-                height: 250px; /* さらに小さい場合の高さ */
+                width: 50%; /* 幅に合わせて調整 */
+                height: 50%; /* さらに小さい場合の高さ */
             }
         }
 
