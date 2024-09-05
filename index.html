@@ -144,47 +144,15 @@
         box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
     }
     
-    /* 画像コンテナのスタイル */
-    .square-image {
-        position: relative;
-        display: inline-block;
+    /* 四角の画像 */
+    .square-image img {
         width: 100%;
-        max-width: 100%;
         height: auto;
         max-height: 150px;
-        box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクトをコンテナに適用 */
-        border-radius: 10px;
-        overflow: hidden; /* エフェクトがコンテナを飛び出さないように */
+        object-fit: contain;
+        box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 四角のまま光のエフェクト */
     }
     
-    /* 画像そのものにはエフェクトなし */
-    .square-image img {
-        width: 100%; /* 画像をコンテナにフィットさせる */
-        height: auto;
-        object-fit: contain; /* 画像の比率を維持して縮小 */
-    }
-
-    /* 大きい画面向けのスタイル */
-    @media (min-width: 1200px) {
-        .square-image {
-            box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* 大画面でエフェクトを控えめに */
-        }
-    }
-    
-    /* 中間サイズの画面向けのスタイル */
-    @media (min-width: 768px) and (max-width: 1199px) {
-        .square-image {
-            box-shadow: 0 0 8px rgba(255, 223, 0, 0.5); /* 中間画面で調整 */
-        }
-    }
-    
-    /* 小さい画面向けのスタイル */
-    @media (max-width: 767px) {
-        .square-image {
-            box-shadow: 0 0 5px rgba(255, 223, 0, 0.3); /* 小さい画面でエフェクトを控えめに */
-        }
-    }
-
     /* テキストのスタイル */
     .text {
         width: 55%;
