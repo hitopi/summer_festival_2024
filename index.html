@@ -230,7 +230,7 @@
             border-radius: 10px;
         }
         
-        /* iframeのスタイル */
+        /* iframeのスタイル（通常画面用） */
         .graph-container iframe {
             position: relative;
             z-index: 1;
@@ -244,10 +244,10 @@
         /* 表示画面が600px以下の場合の調整 */
         @media (max-width: 600px) {
             .graph-container iframe {
-                width: 100%;  /* 親要素に幅を合わせる */
-                min-width: 0; /* 最小幅をリセットして100%に合わせる */
+                width: 80%;  /* 親要素に幅を合わせる */
+                min-width: 0; /* 最小幅をリセット */
                 height: auto;  /* 高さを自動調整 */
-                aspect-ratio: 16 / 9;  /* グラフのアスペクト比を維持 */
+                aspect-ratio: 16 / 9;  /* グラフのアスペクト比を維持し、幅に応じて高さを調整 */
             }
         }
 
