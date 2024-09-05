@@ -232,13 +232,28 @@
     
         /* iframeのスタイル */
         .graph-container iframe {
-        position: relative;
-        z-index: 1;
-        width: 100%;  /* 親要素の幅に合わせて100% */
-        min-width: 600px;  /* 最小幅を指定して十分なサイズに */
-        height: 400px;  /* 高さは固定 */
-        border: 0;
-        overflow: hidden;
+            position: relative;
+            z-index: 1;
+            width: 100%;  /* 親要素の幅に合わせて100% */
+            height: 400px;  /* 高さは固定 */
+            border: 0;
+            overflow: hidden;
+        }
+        
+        /* スマホやタブレット向けの調整 */
+        @media (max-width: 600px) {
+            .graph-container iframe {
+                width: 100%; /* 幅に合わせて調整 */
+                height: 300px; /* 画面が小さい場合の高さを縮小 */
+                min-width: 100%; /* 横スクロールバーを出さないようにする */
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .graph-container iframe {
+                width: 100%; /* 幅に合わせて調整 */
+                height: 250px; /* さらに小さい場合の高さを縮小 */
+            }
         }
 
         /* 背景動画 */
