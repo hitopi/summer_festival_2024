@@ -134,9 +134,12 @@
         }
     
         /* 画像のスタイル */
-        .image {
-            width: 40%;
-            z-index: 1; /* オーバーレイの上に表示 */
+        .image img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: contain;
+            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 黄色の光のエフェクト */
         }
     
         /* テキストのスタイル */
@@ -145,14 +148,6 @@
             padding: 10px;
             color: white;
             z-index: 1; /* オーバーレイの上に表示 */
-        }
-    
-        /* 画像の表示設定 */
-        .split img {
-            width: 100%;
-            height: auto;
-            max-height: 150px;
-            object-fit: contain;
         }
     
         /* 注意文のスタイル */
