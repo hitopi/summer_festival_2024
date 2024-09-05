@@ -7,7 +7,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
-        
+    
         /* 背景色とフォントの設定 */
         body {
             font-family: 'Sawarabi Mincho', serif;
@@ -53,15 +53,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* 黒を半透明に設定 */
+            z-index: 0; /* 背景の下に配置 */
         }
     
         /* メインタイトル、サブタイトル、カウントダウンの共通光のエフェクト */
         .header .title, .header .subtitle, .header .countdown {
-            text-shadow: 0 0 10px rgba(255, 223, 0, 0.85);
+            text-shadow: 0 0 10px rgba(255, 223, 0, 0.85); /* 光のエフェクトを追加 */
             position: relative;
-            z-index: 1;
+            z-index: 1; /* 黒のオーバーレイの上に表示 */
         }
     
         /* メインタイトルのスタイル */
@@ -69,7 +69,7 @@
             margin: 0;
             color: #ffffff;
             text-align: center;
-            font-size: clamp(30px, 10vw, 64px);
+            font-size: clamp(30px, 10vw, 64px); /* ジャンプ率を高めた見出しサイズ */
         }
     
         /* サブタイトルのスタイル */
@@ -77,7 +77,7 @@
             margin-top: 10px;
             color: #ffffff;
             text-align: center;
-            font-size: clamp(18px, 6vw, 32px);
+            font-size: clamp(18px, 6vw, 32px); /* ジャンプ率高め */
         }
     
         /* カウントダウンのスタイル */
@@ -85,7 +85,7 @@
             margin-top: 10px;
             color: #ffffff;
             text-align: center;
-            font-size: clamp(18px, 5vw, 28px);
+            font-size: clamp(18px, 5vw, 28px); /* 少し控えめなジャンプ率 */
         }
     
         /* 各セクションのスタイル */
@@ -95,7 +95,7 @@
     
         /* セクションの見出し */
         .section h3 {
-            font-size: clamp(16px, 5vw, 24px);
+            font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
             border-bottom: 2px solid #000;
             padding-bottom: 5px;
             margin-bottom: 10px;
@@ -103,7 +103,7 @@
     
         /* セクションの本文 */
         .section p {
-            font-size: clamp(12px, 3vw, 18px);
+            font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
             line-height: 1.6;
         }
     
@@ -119,16 +119,6 @@
             background-size: cover;
             background-position: center;
             border-radius: 10px;
-            flex-wrap: wrap; /* フレックスボックスを折り返し可能に */
-        }
-    
-        /* テキストの幅を調整 */
-        .split .text {
-            width: 55%;
-            padding: 10px;
-            color: white;
-            z-index: 1;
-            box-sizing: border-box;
         }
     
         /* 背景画像を白く濁すためのオーバーレイ */
@@ -139,26 +129,36 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.15);
-            z-index: 0;
+            background-color: rgba(255, 255, 255, 0.15); /* 透明度を調整 */
+            z-index: 0; /* 背景の下に配置 */
         }
     
         /* 画像のスタイル */
+        /* 円形の画像 */
         .circle-image img {
             width: 100%;
             height: auto;
             max-height: 150px;
             object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
+            border-radius: 50%; /* 画像を円形にする */
+            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
         }
-    
+        
+        /* 四角の画像 */
         .square-image img {
             width: 100%;
             height: auto;
             max-height: 150px;
             object-fit: contain;
-            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
+            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 四角のまま光のエフェクト */
+        }
+    
+        /* テキストのスタイル */
+        .text {
+            width: 55%;
+            padding: 10px;
+            color: white;
+            z-index: 1; /* オーバーレイの上に表示 */
         }
     
         /* 注意文のスタイル */
@@ -166,7 +166,7 @@
             font-size: clamp(12px, 2.5vw, 16px);
             color: red;
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 200, 0, 0.4);
+            text-shadow: 0 0 10px rgba(255, 200, 0, 0.4); /* 黄色の光のエフェクト */
         }
     
         /* リンクやボタンのスタイル */
@@ -180,6 +180,7 @@
             border: 2px solid #E64A19;
         }
     
+        /* リンクホバー時のスタイル */
         a:hover {
             background-color: #D84315;
         }
@@ -188,32 +189,7 @@
         .red-text {
             color: red;
         }
-    
-        /* メディアクエリで画面幅が狭い場合のスタイル調整 */
-        @media (max-width: 768px) {
-            .split {
-                flex-direction: column; /* 画面が狭いときに上下に並べる */
-            }
-    
-            .split .text {
-                width: 100%; /* テキストが100%の幅を取る */
-                text-align: center; /* テキストの中央揃え */
-            }
-    
-            .circle-image img, .square-image img {
-                max-width: 80%; /* 画面幅が狭いときに画像の最大幅を80%に設定 */
-                margin: 10px auto; /* 画像を中央に寄せる */
-            }
-        }
-    
-        /* さらに狭い画面 (スマホサイズ) のスタイル調整 */
-        @media (max-width: 480px) {
-            .circle-image img, .square-image img {
-                max-width: 70%; /* スマホサイズでは画像をさらに縮小 */
-            }
-        }
     </style>
-
 
     </head>
 <body>
@@ -280,7 +256,7 @@
                     ・当日レイアウト ▶ 右図
                 </p>
             </div>
-            <div class="square-image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
+            <div class="square-image" style="margin-right: 15px;"> <!-- 画像の位置を調整 -->
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png" alt="会場レイアウト">
             </div>
         </div>
@@ -341,4 +317,101 @@
 </script>
 
 </body>
-</html>
+</html>」
+
+の
+
+「    <!-- 参加費セクション -->
+    <div class="section">
+        <h3>■ 参加費</h3>
+        <div class="split">
+            <div class="text">
+                <p>
+                    ・前売り券：500円（学生）<br>
+                    　1000円（その他）<br><br>
+                    ・当日券：500円（学生）<br>
+                    　1500円（その他）
+                </p>
+                <p class="note">　浴衣など夏っぽい服装で参加 ▶ 参加費無料！</p>
+            </div>
+            <div class="circle-image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
+                <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E6%B5%B4%E8%A1%A3%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%EF%BC%92.png" alt="浴衣で参加無料">
+            </div>
+        </div>
+    </div>
+
+    <!-- イベント内容セクション -->
+    <div class="section">
+        <h3>■ イベント内容</h3>
+        <div class="split">
+            <div class="text">
+                <p>
+                    ・食事：お寿司、ピザ、中華、サラダ、唐揚げなど<br><br>
+                    ・出し物：流しそうめん、スーパーボールすくい<br>
+                    　射的、スイカ割り、たこ焼き、わたあめなど
+                </p>
+                <p class="note">　( ﾟДﾟ)出し物によっては景品あるかも！</p>
+            </div>
+            <div class="circle-image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
+                <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E5%9B%B32.png" alt="お祭りの様子">
+            </div>
+        </div>
+    </div>
+
+    <!-- 会場セクション -->
+    <div class="section">
+        <h3>■ 会場</h3>
+        <div class="split">
+            <div class="text">
+                <p>
+                    ・TWIns 2F ラウンジ<br><br>
+                    ・10月4日(金曜日)18時～21時<br><br>
+                    ・当日レイアウト ▶ 右図
+                </p>
+            </div>
+            <div class="square-image" style="margin-right: 15px;"> <!-- 画像の位置を調整 -->
+                <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png" alt="会場レイアウト">
+            </div>
+        </div>
+    </div>
+
+    <!-- 当日の流れセクション -->
+    <div class="section">
+        <h3>■ 当日の参加までの流れ</h3>
+        <div class="split">
+            <div class="text">
+                <p>
+                     ①「Google Form」で参加登録<br><br>
+                     ② 登録画面を受付に提示<br><br>
+                     ③ 支払い（受付の人に <span class="red-text" style="text-shadow: 0 0 10px rgba(255, 200, 0, 0.5);">現金</span>で）<br><br>
+                     ④ 参加 ▶ 夏祭りを楽しむ！
+                </p>
+            </div>
+            <div class="square-image" style="margin-right: 5px;"> <!-- 画像の位置を調整 -->
+                <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E9%81%8E%E5%8E%BB.png" alt="当日の流れ">
+            </div>
+        </div>
+    </div>
+
+    <!-- 参加者状況セクション -->
+    <div class="section">
+        <h3>■ 参加者状況</h3>
+        <p>現在の参加人数はコチラ</p> <!-- 追加説明文 -->
+        
+        <!-- 背景動画を再生 -->
+        <div class="graph-container" style="position: relative; width: 100%; max-width: 100%; overflow: hidden; border-radius: 10px;">
+            
+            <!-- 背景動画 -->
+            <video autoplay muted loop style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: left bottom; z-index: 0;">
+                <source src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AD%E3%83%BC%E3%83%89%E7%94%BB%E9%9D%A2.mp4" type="video/mp4">
+                お使いのブラウザは動画再生に対応していません。
+            </video>
+    
+            <!-- グラフコンテンツ -->
+            <iframe 
+                src="https://docs.google.com/spreadsheets/d/17rvtPGZkUrvwv2toaWqAMr4Sukfq2olIPFkXkoGWRo4/pubchart?oid=64160653&format=interactive"
+                style="position: relative; z-index: 1; width: 100%; height: 100%; min-height: 400px; border: 0;" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
