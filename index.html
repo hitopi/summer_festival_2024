@@ -74,55 +74,17 @@
             font-size: clamp(18px, 5vw, 28px); /* 少し控えめなジャンプ率 */
         }
 
-        /* セクション全体のスタイル */
+        /* 各セクションのスタイル */
         .section {
-            padding: 15px;
             margin-bottom: 30px;
-            border-radius: 10px;
-            border: 3px solid;
         }
 
-        /* 参加フォームURLセクション */
-        .section.form {
-            background-color: #e1f5fe; /* 薄い青 */
-            border-color: #0288d1; /* 青い枠線 */
-        }
-        
-        /* 参加費セクション */
-        .section.cost {
-            background-color: #fce4ec; /* 薄いピンク */
-            border-color: #d81b60; /* ピンクの枠線 */
-        }
-        
-        /* イベント内容セクション */
-        .section.content {
-            background-color: #fff3e0; /* 薄いオレンジ */
-            border-color: #f57c00; /* オレンジの枠線 */
-        }
-        
-        /* 会場セクション */
-        .section.venue {
-            background-color: #e8f5e9; /* 薄い緑 */
-            border-color: #43a047; /* 緑の枠線 */
-        }
-
-        /* 当日の流れセクション */
-        .section.flow {
-            background-color: #f3e5f5; /* 薄い紫 */
-            border-color: #8e24aa; /* 紫の枠線 */
-        }
-
-        /* 参加者状況セクション */
-        .section.participants {
-            background-color: #ffecb3; /* 薄い黄色 */
-            border-color: #ffa000; /* 黄色の枠線 */
-        }
-        
-        /* セクションタイトルのスタイル */
+        /* セクションの見出し */
         .section h3 {
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 15px;
+            font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         /* セクションの本文 */
@@ -200,13 +162,13 @@
     </div>
 
     <!-- 参加フォームURLセクション -->
-    <div class="section form">
+    <div class="section">
         <h3>■ 参加フォームURL</h3>
         <p><a href="https://www.youtube.com/@HikakinTV" target="_blank">こちらをクリックして参加フォームにアクセス</a></p>
     </div>
 
     <!-- 参加費セクション -->
-    <div class="section cost">
+    <div class="section">
         <h3>■ 参加費</h3>
         <div class="split">
             <div class="text">
@@ -225,7 +187,7 @@
     </div>
 
     <!-- イベント内容セクション -->
-    <div class="section content">
+    <div class="section">
         <h3>■ イベント内容</h3>
         <div class="split">
             <div class="text">
@@ -243,7 +205,7 @@
     </div>
 
     <!-- 会場セクション -->
-    <div class="section venue">
+    <div class="section">
         <h3>■ 会場</h3>
         <div class="split">
             <div class="text">
@@ -260,7 +222,7 @@
     </div>
 
     <!-- 当日の流れセクション -->
-    <div class="section flow">
+    <div class="section">
         <h3>■ 当日の参加までの流れ</h3>
         <div class="split">
             <div class="text">
@@ -278,7 +240,7 @@
     </div>
 
     <!-- 参加者状況セクション -->
-    <div class="section participants">
+    <div class="section">
         <h3>■ 参加者状況</h3>
         <p>現在の参加人数はコチラ</p> <!-- 追加説明文 -->
         <div class="graph-container" style="width: 100%; max-width: 100%; overflow: hidden;">
