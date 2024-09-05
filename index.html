@@ -13,10 +13,6 @@
             font-family: 'Sawarabi Mincho', serif;
             margin: 20px;
             background: linear-gradient(180deg, #FFB74D 0%, #8E24AA 100%);
-            background-image: url('path_to_fireworks_icon'); /* 背景に打ち上げ花火アイコン */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
         }
 
         /* コンテンツの全体的な枠組み */
@@ -30,71 +26,23 @@
             border-radius: 10px;
         }
 
-        /* セクション全体のスタイル */
-        .section {
-            margin-bottom: 30px;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: #FFF8E1; /* 柔らかい背景色 */
-            border: 3px solid #FF5722; /* セクションごとに異なる色 */
+        /* ヘッダーのスタイル */
+        .header {
             position: relative;
-        }
-
-        /* 各セクションの色分け */
-        .section:nth-child(odd) {
-            border-color: #8BC34A; /* 緑色 */
-        }
-
-        .section:nth-child(even) {
-            border-color: #03A9F4; /* 青色 */
-        }
-
-        /* セクションの見出し */
-        .section h3 {
-            font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        /* セクションの本文 */
-        .section p {
-            font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
-            line-height: 1.6;
-        }
-
-        /* イラストアイコンを追加（紙提灯や団扇） */
-        .icon {
-            width: 50px;
-            height: auto;
-            position: absolute;
-            top: -10px;
-            right: -10px;
-        }
-
-        .icon img {
-            width: 100%;
-        }
-
-        /* リンクやボタンのスタイル */
-        a {
-            background-color: #FF5722;
-            padding: 10px;
-            border-radius: 5px;
+            text-align: center;
             color: white;
-            font-weight: bold;
-            text-decoration: none;
-            border: 2px solid #E64A19;
-        }
-
-        /* リンクホバー時のスタイル */
-        a:hover {
-            background-color: #D84315;
-        }
-
-        /* 赤い文字のクラス */
-        .red-text {
-            color: red;
+            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 250px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
         }
 
         /* メインタイトル、サブタイトル、カウントダウンの共通光のエフェクト */
@@ -125,6 +73,82 @@
             text-align: center;
             font-size: clamp(18px, 5vw, 28px); /* 少し控えめなジャンプ率 */
         }
+
+        /* 各セクションのスタイル */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* セクションの見出し */
+        .section h3 {
+            font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* セクションの本文 */
+        .section p {
+            font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
+            line-height: 1.6;
+        }
+
+        /* テキストと画像の配置 */
+        .split {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 画像のスタイル */
+        .image {
+            width: 40%;
+        }
+
+        /* テキストのスタイル */
+        .text {
+            width: 55%;
+            padding: 10px;
+        }
+
+        /* 画像の表示設定 */
+        .split img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: contain;
+        }
+
+        /* 注意文のスタイル */
+        .note {
+            font-size: clamp(12px, 2.5vw, 16px);
+            color: red;
+            font-weight: bold;
+        }
+
+        /* リンクやボタンのスタイル */
+        a {
+            background-color: #FF5722;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #E64A19;
+        }
+
+        /* リンクホバー時のスタイル */
+        a:hover {
+            background-color: #D84315;
+        }
+
+        /* 赤い文字のクラス */
+        .red-text {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -141,7 +165,6 @@
     <div class="section">
         <h3>■ 参加フォームURL</h3>
         <p><a href="https://www.youtube.com/@HikakinTV" target="_blank">こちらをクリックして参加フォームにアクセス</a></p>
-        <div class="icon"><img src="path_to_lantern_icon" alt="提灯アイコン"></div> <!-- 紙提灯アイコン -->
     </div>
 
     <!-- 参加費セクション -->
@@ -161,7 +184,6 @@
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E6%B5%B4%E8%A1%A3%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88.png" alt="浴衣で参加無料">
             </div>
         </div>
-        <div class="icon"><img src="path_to_fan_icon" alt="団扇アイコン"></div> <!-- 団扇アイコン -->
     </div>
 
     <!-- イベント内容セクション -->
@@ -180,7 +202,6 @@
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E5%9B%B3.png" alt="お祭りの様子">
             </div>
         </div>
-        <div class="icon"><img src="path_to_fireworks_icon" alt="花火アイコン"></div> <!-- 打ち上げ花火アイコン -->
     </div>
 
     <!-- 会場セクション -->
@@ -198,7 +219,6 @@
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88.png" alt="会場レイアウト">
             </div>
         </div>
-        <div class="icon"><img src="path_to_fan_icon" alt="団扇アイコン"></div> <!-- 団扇アイコン -->
     </div>
 
     <!-- 当日の流れセクション -->
@@ -217,7 +237,6 @@
                 <img src="https://github.com/hitopi/summer_festival_2024/raw/main/%E9%81%8E%E5%8E%BB.png" alt="当日の流れ">
             </div>
         </div>
-        <div class="icon"><img src="path_to_lantern_icon" alt="提灯アイコン"></div> <!-- 紙提灯アイコン -->
     </div>
 
     <!-- 参加者状況セクション -->
@@ -231,7 +250,6 @@
                 allowfullscreen>
             </iframe>
         </div>
-        <div class="icon"><img src="path_to_fireworks_icon" alt="花火アイコン"></div> <!-- 打ち上げ花火アイコン -->
     </div>
 
 <script>
