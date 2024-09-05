@@ -149,17 +149,25 @@
         position: relative;
         width: 100%;
         max-width: 100%; /* 親要素に収まるようにする */
-        overflow: hidden; /* エフェクトがはみ出ないようにする */
+        overflow: hidden; /* エフェクトが飛び出さないようにする */
     }
     
-    /* 画像にbox-shadowを適用 */
+    /* 画像自体にbox-shadowを適用 */
     .square-image img {
         width: 100%; /* 画像を親要素にフィットさせる */
         height: auto;
         max-height: 150px; /* 画像の最大高さを設定 */
         object-fit: contain; /* 画像の比率を維持して縮小 */
-        box-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* エフェクトを画像に適用 */
+        box-shadow: 0 0 8px rgba(255, 223, 0, 0.8); /* エフェクトの大きさを制御 */
         border-radius: 10px; /* 画像の角を丸める */
+    }
+    
+    /* 大きい画面に対して適用するメディアクエリ */
+    @media (min-width: 1200px) {
+        .square-image img {
+            box-shadow: 0 0 5px rgba(255, 223, 0, 0.7); /* 大画面でのエフェクトを小さく */
+            max-width: 80%; /* 大画面で画像の最大幅を80%に制限 */
+        }
     }
 
     /* テキストのスタイル */
