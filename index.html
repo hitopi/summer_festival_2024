@@ -241,9 +241,10 @@
             overflow: hidden;
         }
         
+        /* 表示画面が600px以下の場合の調整 */
         @media (max-width: 600px) {
             .graph-container iframe {
-                width: 80%;  /* 幅を親要素の80%に設定 */
+                width: 80vw;  /* 表示画面の80%の幅を設定 */
                 aspect-ratio: 16 / 9;  /* 縦横比を16:9で維持し、高さを自動で調整 */
                 margin: 0 auto;  /* グラフを中央に配置し、左右に均等な余白を確保 */
             }
