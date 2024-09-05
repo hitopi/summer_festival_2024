@@ -144,20 +144,21 @@
         box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
     }
     
-    /* 四角の画像 */
+    /* 四角の画像コンテナ */
     .square-image {
         position: relative;
         width: 100%;
-        overflow: hidden; /* これでエフェクトがはみ出さない */
+        overflow: hidden; /* エフェクトが飛び出さないようにする */
     }
     
+    /* 画像自体にbox-shadowを適用 */
     .square-image img {
-        width: 100%; /* 画像を親要素にフィットさせる */
+        width: 100%; /* 画像をコンテナにフィットさせる */
         height: auto;
         max-height: 150px; /* 画像の最大高さを設定 */
-        object-fit: contain;
-        box-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* 光のエフェクトを適用 */
-        border-radius: 10px; /* 画像の端を少し丸める */
+        object-fit: contain; /* 画像の比率を維持して縮小 */
+        box-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* エフェクトを画像に直接適用 */
+        border-radius: 10px; /* 画像の角を丸める */
     }
 
     /* テキストのスタイル */
