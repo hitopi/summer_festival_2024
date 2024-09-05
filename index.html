@@ -410,14 +410,14 @@
                 border: 15px solid rgba(0, 0, 0, 1);  /* 黒い枠線 */
                 border-radius: 10px;
                 box-sizing: border-box;
-                z-index: 2; /* グラフより手前に配置 */
+                z-index: 4; /* グラフと背景動画より前に配置 */
                 pointer-events: none; /* 枠線がクリックを妨げないように設定 */
             "></div>
             
             <!-- テキストとグラフコンテンツ -->
             <div class="text" style="position: relative; z-index: 3; padding: 10px; color: white;">
                 <p class="black-effect">
-                    　　現在の参加人数はコチラ
+                    現在の参加人数はコチラ
                 </p>
                 
                 <!-- グラフコンテンツ -->
@@ -429,6 +429,7 @@
             </div>
         </div>
     </div>
+
 
 
 
