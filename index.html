@@ -232,13 +232,14 @@
     
         /* iframeのスタイル */
         .graph-container iframe {
-            position: relative;
-            z-index: 1;
-            width: 100%;  /* 横幅100%で親要素にフィットさせる */
-            height: 400px; /* 高さを固定 */
-            border: 0;
-            overflow: hidden; /* 横スクロールを無効にする */
-        }
+        position: relative;
+        z-index: 1;
+        width: 100%;  /* 親要素の幅に合わせて100% */
+        min-width: 600px;  /* 最小幅を指定して十分なサイズに */
+        height: 400px;  /* 高さは固定 */
+        border: 0;
+        overflow: hidden;
+    }
 
         /* 背景動画 */
         video {
