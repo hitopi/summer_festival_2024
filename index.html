@@ -145,16 +145,21 @@
     }
     
     /* 四角の画像 */
+    .square-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden; /* これでエフェクトがはみ出さない */
+    }
+    
     .square-image img {
         width: 100%; /* 画像を親要素にフィットさせる */
         height: auto;
         max-height: 150px; /* 画像の最大高さを設定 */
         object-fit: contain;
-        box-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* 光のエフェクトのサイズを少し小さく */
+        box-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* 光のエフェクトを適用 */
         border-radius: 10px; /* 画像の端を少し丸める */
     }
 
-    
     /* テキストのスタイル */
     .text {
         width: 55%;
