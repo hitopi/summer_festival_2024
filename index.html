@@ -177,6 +177,13 @@
         color: white;
         z-index: 1; /* オーバーレイの上に表示 */
     }
+
+    /* 光のエフェクトを持つテキストスタイル */
+    .text p {
+        font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
+        line-height: 1.6;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* 黒の光のエフェクトを追加 */
+    }
     
     /* 注意文のスタイル */
     .note {
