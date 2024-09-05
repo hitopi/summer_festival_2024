@@ -144,45 +144,15 @@
         box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
     }
     
-    /* 四角の画像コンテナ */
-    .square-image {
-        position: relative;
-        width: 100%;
-        max-width: 100%; /* 親要素に収まるようにする */
-        display: inline-block; /* コンテナを画像にフィットさせる */
-    }
-    
-    /* 光のエフェクトを追加 */
-    .square-image::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 0 10px 10px rgba(255, 223, 0, 0.8); /* 光のエフェクトを追加 */
-        border-radius: 10px; /* 画像と同じ角丸にする */
-        pointer-events: none; /* エフェクトがクリック操作を邪魔しないようにする */
-        z-index: 1; /* 画像の上に表示 */
-    }
-    
-    /* 画像自体のスタイル */
+    /* 四角の画像 */
     .square-image img {
-        width: 100%; /* 画像を親要素にフィットさせる */
+        width: 100%;
         height: auto;
-        max-height: 150px; /* 画像の最大高さを設定 */
-        object-fit: contain; /* 画像の比率を維持して縮小 */
-        border-radius: 10px; /* 画像の角を丸める */
-        z-index: 0; /* エフェクトの下に表示 */
+        max-height: 150px;
+        object-fit: contain;
+        box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 四角のまま光のエフェクト */
     }
     
-    /* 大きい画面に対して適用するメディアクエリ */
-    @media (min-width: 1200px) {
-        .square-image::before {
-            box-shadow: 0 0 5px 5px rgba(255, 223, 0, 0.7); /* 大画面でエフェクトを少し小さく */
-        }
-    }
-
     /* テキストのスタイル */
     .text {
         width: 55%;
