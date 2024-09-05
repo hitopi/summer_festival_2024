@@ -8,236 +8,236 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
     
-    /* 背景色とフォントの設定 */
-    body {
-        font-family: 'Sawarabi Mincho', serif;
-        margin: 20px;
-        background: linear-gradient(180deg, #FFB74D 0%, #4A148C 100%);
-    }
-    
-    /* コンテンツの全体的な枠組み */
-    .container {
-        width: 90%;
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: white;
-        padding: 20px;
-        border: 2px solid #ccc;
-        border-radius: 10px;
-    }
-    
-    /* ヘッダーのスタイル */
-    .header {
-        position: relative;
-        text-align: center;
-        color: white;
-        background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 250px;
-        border-radius: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        overflow: hidden;
-    }
-    
-    /* 背景画像の上に黒を半透明で重ねる */
-    .header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4); /* 黒を半透明に設定 */
-        z-index: 0; /* 背景の下に配置 */
-    }
-    
-    /* メインタイトル、サブタイトル、カウントダウンの共通光のエフェクト */
-    .header .title, .header .subtitle, .header .countdown {
-        text-shadow: 0 0 10px rgba(255, 223, 0, 0.85); /* 光のエフェクトを追加 */
-        position: relative;
-        z-index: 1; /* 黒のオーバーレイの上に表示 */
-    }
-    
-    /* メインタイトルのスタイル */
-    .header .title {
-        margin: 0;
-        color: #ffffff;
-        text-align: center;
-        font-size: clamp(30px, 10vw, 64px); /* ジャンプ率を高めた見出しサイズ */
-    }
-    
-    /* サブタイトルのスタイル */
-    .header .subtitle {
-        margin-top: 10px;
-        color: #ffffff;
-        text-align: center;
-        font-size: clamp(18px, 6vw, 32px); /* ジャンプ率高め */
-    }
-    
-    /* カウントダウンのスタイル */
-    .header .countdown {
-        margin-top: 10px;
-        color: #ffffff;
-        text-align: center;
-        font-size: clamp(18px, 5vw, 28px); /* 少し控えめなジャンプ率 */
-    }
-    
-    /* 各セクションのスタイル */
-    .section {
-        margin-bottom: 30px;
-    }
-    
-    /* セクションの見出し */
-    .section h3 {
-        font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
-        border-bottom: 2px solid #000;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
-    
-    /* セクションの本文 */
-    .section p {
-        font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
-        line-height: 1.6;
-    }
-    
-    /* テキストと画像の配置 */
-    .split {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 10px;
-        position: relative;
-        overflow: hidden;
-        background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%882.png');
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-    }
-    
-    /* 背景画像を白く濁すためのオーバーレイ */
-    .split::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.15); /* 透明度を調整 */
-        z-index: 0; /* 背景の下に配置 */
-    }
-    
-    /* 画像のスタイル */
-    /* 円形の画像 */
-    .circle-image img {
-        width: 100%;
-        height: auto;
-        max-height: 150px;
-        object-fit: cover;
-        border-radius: 50%; /* 画像を円形にする */
-        box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
-    }
-    
-    /* 四角の画像 */
-    .square-image img {
-        width: 100%;
-        height: auto;
-        max-height: clamp(100px, 20vw, 150px); /* 画面幅に応じて柔軟にサイズを調整 */
-        object-fit: contain; /* 画像がすべて表示されるように */
-        box-shadow: 0 0 clamp(3px, 1vw, 15px) rgba(255, 223, 0, 0.8); /* 光のエフェクトも柔軟に調整 */
-    }
-    
-    /* メディアクエリ - スマホやタブレット向けに小さく調整 */
-    @media (max-width: 600px) {
-        .square-image img {
-            width: 100%; /* 画像の横幅を100%に設定 */
-            max-height: 100px; /* スマホでは最大100pxに制限 */
-            box-shadow: 0 0 5px rgba(255, 223, 0, 0.8); /* 光のエフェクトを控えめに */
-        }
-    }
-    
-    @media (min-width: 601px) and (max-width: 1199px) {
-        .square-image img {
-            width: auto; /* iPadサイズでも横幅を調整 */
-            max-height: 130px; /* 中間サイズで画像の高さをやや縮小 */
-            box-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* 光のエフェクトを適度に調整 */
-        }
-    }
-
-    /* テキストのスタイル */
-    .text {
-        width: 55%;
-        padding: 10px;
-        color: white;
-        z-index: 1; /* オーバーレイの上に表示 */
-    }
-
-    /* 光のエフェクトを持つテキストスタイル */
-    .text p {
-        font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
-        line-height: 1.6;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* 黒の光のエフェクトを追加 */
-    }
-    
-    /* 注意文のスタイル */
-    .note {
-        font-size: clamp(12px, 2.5vw, 16px);
-        color: red;
-        font-weight: bold;
-        text-shadow: 0 0 10px rgba(255, 200, 0, 0.4); /* 黄色の光のエフェクト */
-    }
-    
-    /* リンクやボタンのスタイル */
-    a {
-        background-color: #FF5722;
-        padding: 10px;
-        border-radius: 5px;
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        border: 2px solid #E64A19;
-    }
-    
-    /* リンクホバー時のスタイル */
-    a:hover {
-        background-color: #D84315;
-    }
-    
-    /* 赤い文字のクラス */
-    .red-text {
-        color: red;
-    }
-    
-    /* メディアクエリ - 画面幅が600px以下の場合 */
-    @media (max-width: 600px) {
-        .split {
-            flex-direction: column;
-            align-items: flex-start;
+        /* 背景色とフォントの設定 */
+        body {
+            font-family: 'Sawarabi Mincho', serif;
+            margin: 20px;
+            background: linear-gradient(180deg, #FFB74D 0%, #4A148C 100%);
         }
     
-        .text {
-            width: 100%;
-            margin-bottom: 10px; /* textの下に余白を追加 */
+        /* コンテンツの全体的な枠組み */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
         }
     
-        .circle-image, .square-image {
-            width: 100%;
+        /* ヘッダーのスタイル */
+        .header {
+            position: relative;
             text-align: center;
+            color: white;
+            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 250px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
         }
     
-        .circle-image img, .square-image img {
-            width: 50%; /* 画像の横幅を縮小 */
+        /* 背景画像の上に黒を半透明で重ねる */
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 0;
         }
-    }
+    
+        /* メインタイトル、サブタイトル、カウントダウンの共通光のエフェクト */
+        .header .title, .header .subtitle, .header .countdown {
+            text-shadow: 0 0 10px rgba(255, 223, 0, 0.85);
+            position: relative;
+            z-index: 1;
+        }
+    
+        /* メインタイトルのスタイル */
+        .header .title {
+            margin: 0;
+            color: #ffffff;
+            text-align: center;
+            font-size: clamp(30px, 10vw, 64px);
+        }
+    
+        /* サブタイトルのスタイル */
+        .header .subtitle {
+            margin-top: 10px;
+            color: #ffffff;
+            text-align: center;
+            font-size: clamp(18px, 6vw, 32px);
+        }
+    
+        /* カウントダウンのスタイル */
+        .header .countdown {
+            margin-top: 10px;
+            color: #ffffff;
+            text-align: center;
+            font-size: clamp(18px, 5vw, 28px);
+        }
+    
+        /* 各セクションのスタイル */
+        .section {
+            margin-bottom: 30px;
+        }
+    
+        /* セクションの見出し */
+        .section h3 {
+            font-size: clamp(16px, 5vw, 24px);
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+    
+        /* セクションの本文 */
+        .section p {
+            font-size: clamp(12px, 3vw, 18px);
+            line-height: 1.6;
+        }
+    
+        /* テキストと画像の配置 */
+        .split {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%882.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+    
+        /* 背景画像を白く濁すためのオーバーレイ */
+        .split::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.15);
+            z-index: 0;
+        }
+    
+        /* 画像のスタイル */
+        /* 円形の画像 */
+        .circle-image img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
+        }
+    
+        /* 四角の画像 */
+        .square-image img {
+            width: 100%;
+            height: auto;
+            max-height: clamp(100px, 20vw, 150px);
+            object-fit: contain;
+            box-shadow: 0 0 clamp(3px, 1vw, 15px) rgba(255, 223, 0, 0.8);
+        }
+    
+        /* メディアクエリ - スマホやタブレット向けに小さく調整 */
+        @media (max-width: 600px) {
+            .square-image img {
+                width: 100%;
+                max-height: 100px;
+                box-shadow: 0 0 5px rgba(255, 223, 0, 0.8);
+            }
+        }
+    
+        @media (min-width: 601px) and (max-width: 1199px) {
+            .square-image img {
+                width: auto;
+                max-height: 130px;
+                box-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+            }
+        }
+
+        /* テキストのスタイル */
+        .text {
+            width: 55%;
+            padding: 10px;
+            color: white;
+            z-index: 1;
+        }
+
+        /* 光のエフェクトを持つテキストスタイル */
+        .text p {
+            font-size: clamp(12px, 3vw, 18px);
+            line-height: 1.6;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* 黒の光のエフェクトを追加 */
+        }
+    
+        /* 注意文のスタイル */
+        .note {
+            font-size: clamp(12px, 2.5vw, 16px);
+            color: red;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 200, 0, 0.4);
+        }
+    
+        /* リンクやボタンのスタイル */
+        a {
+            background-color: #FF5722;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #E64A19;
+        }
+    
+        /* リンクホバー時のスタイル */
+        a:hover {
+            background-color: #D84315;
+        }
+    
+        /* 赤い文字のクラス */
+        .red-text {
+            color: red;
+        }
+    
+        /* メディアクエリ - 画面幅が600px以下の場合 */
+        @media (max-width: 600px) {
+            .split {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .text {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        
+            .circle-image, .square-image {
+                width: 100%;
+                text-align: center;
+            }
+        
+            .circle-image img, .square-image img {
+                width: 50%;
+            }
+        }
     </style>
 
-    </head>
+</head>
 <body>
 
 <div class="container">
@@ -259,7 +259,7 @@
         <h3>■ 参加費</h3>
         <div class="split">
             <div class="text">
-                <p style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);">
+                <p>
                     ・前売り券：500円（学生）<br>
                     　1000円（その他）<br><br>
                     ・当日券：500円（学生）<br>
@@ -278,7 +278,7 @@
         <h3>■ イベント内容</h3>
         <div class="split">
             <div class="text">
-                <p style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);">
+                <p>
                     ・食事：お寿司、ピザ、中華、サラダ、唐揚げなど<br><br>
                     ・出し物：流しそうめん、スーパーボールすくい<br>
                     　射的、スイカ割り、たこ焼き、わたあめなど
@@ -296,7 +296,7 @@
         <h3>■ 会場</h3>
         <div class="split">
             <div class="text">
-                <p style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);">
+                <p>
                     ・TWIns 2F ラウンジ<br><br>
                     ・10月4日(金曜日)18時～21時<br><br>
                     ・当日レイアウト ▶ 右図
@@ -313,7 +313,7 @@
         <h3>■ 当日の参加までの流れ</h3>
         <div class="split">
             <div class="text">
-                <p style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);">
+                <p>
                      ①「Google Form」で参加登録<br><br>
                      ② 登録画面を受付に提示<br><br>
                      ③ 支払い（受付の人に <span class="red-text" style="text-shadow: 0 0 10px rgba(255, 200, 0, 0.5);">現金</span>で）<br><br>
@@ -329,7 +329,7 @@
     <!-- 参加者状況セクション -->
     <div class="section">
         <h3>■ 参加者状況</h3>
-        <p>現在の参加人数はコチラ</p> <!-- 追加説明文 -->
+        <p>現在の参加人数はコチラ</p>
         
         <!-- 背景動画を再生 -->
         <div class="graph-container" style="position: relative; width: 100%; max-width: 100%; overflow: hidden; border-radius: 10px;">
@@ -351,7 +351,7 @@
 
 <script>
     // イベント開催日
-    const eventDate = new Date('2024-10-04T00:00:00+09:00'); // イベントの開催日設定
+    const eventDate = new Date('2024-10-04T00:00:00+09:00');
     const today = new Date();
     
     // 残り日数を計算
@@ -364,6 +364,3 @@
 
 </body>
 </html>
-            </iframe>
-        </div>
-    </div>
