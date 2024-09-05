@@ -8,13 +8,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 
-        /* 背景色とフォントの設定 */
+       /* 背景色とフォントの設定 */
         body {
             font-family: 'Sawarabi Mincho', serif;
             margin: 20px;
             background: linear-gradient(180deg, #FFB74D 0%, #8E24AA 100%);
         }
-
+    
         /* コンテンツの全体的な枠組み */
         .container {
             width: 90%;
@@ -25,7 +25,7 @@
             border: 2px solid #ccc;
             border-radius: 10px;
         }
-
+    
         /* ヘッダーのスタイル */
         .header {
             position: relative;
@@ -44,12 +44,12 @@
             padding: 20px;
             overflow: hidden;
         }
-
+    
         /* メインタイトル、サブタイトル、カウントダウンの共通光のエフェクト */
         .header .title, .header .subtitle, .header .countdown {
             text-shadow: 0 0 10px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
         }
-
+    
         /* メインタイトルのスタイル */
         .header .title {
             margin: 0;
@@ -57,7 +57,7 @@
             text-align: center;
             font-size: clamp(30px, 10vw, 64px); /* ジャンプ率を高めた見出しサイズ */
         }
-
+    
         /* サブタイトルのスタイル */
         .header .subtitle {
             margin-top: 10px;
@@ -65,7 +65,7 @@
             text-align: center;
             font-size: clamp(18px, 6vw, 32px); /* ジャンプ率高め */
         }
-
+    
         /* カウントダウンのスタイル */
         .header .countdown {
             margin-top: 10px;
@@ -73,12 +73,12 @@
             text-align: center;
             font-size: clamp(18px, 5vw, 28px); /* 少し控えめなジャンプ率 */
         }
-
+    
         /* 各セクションのスタイル */
         .section {
             margin-bottom: 30px;
         }
-
+    
         /* セクションの見出し */
         .section h3 {
             font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
@@ -86,13 +86,13 @@
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
-
+    
         /* セクションの本文 */
         .section p {
             font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
             line-height: 1.6;
         }
-
+    
         /* テキストと画像の配置 */
         .split {
             display: flex;
@@ -101,26 +101,27 @@
             margin-top: 10px;
             position: relative;
             overflow: hidden;
+            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%882.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-
+    
         /* 画像のスタイル */
         .image {
             width: 40%;
+            z-index: 1; /* 背景画像の上に表示するために設定 */
         }
-
+    
         /* テキストのスタイル */
         .text {
             width: 55%;
             padding: 10px;
-            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%882.png'); /* 花火画像のURLを指定 */
-            background-size: cover;
-            background-position: center;
-            border-radius: 5px; /* 角を少し丸める */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 影をつけてテキストを際立たせる */
-            color: white; /* テキストが見やすいように白色に設定 */
-            position: relative; /* 他の要素に影響されないように設定 */
+            color: white;
+            z-index: 1; /* 背景画像の上に表示するために設定 */
         }
-
+    
         /* 画像の表示設定 */
         .split img {
             width: 100%;
@@ -128,14 +129,14 @@
             max-height: 150px;
             object-fit: contain;
         }
-
+    
         /* 注意文のスタイル */
         .note {
             font-size: clamp(12px, 2.5vw, 16px);
             color: red;
             font-weight: bold;
         }
-
+    
         /* リンクやボタンのスタイル */
         a {
             background-color: #FF5722;
@@ -146,12 +147,12 @@
             text-decoration: none;
             border: 2px solid #E64A19;
         }
-
+    
         /* リンクホバー時のスタイル */
         a:hover {
             background-color: #D84315;
         }
-
+    
         /* 赤い文字のクラス */
         .red-text {
             color: red;
