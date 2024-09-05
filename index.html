@@ -235,7 +235,8 @@
             position: relative;
             z-index: 1;
             width: 100%;  /* 親要素の幅に合わせて100% */
-            height: 400px;  /* 高さは固定 */
+            max-width: 100%; /* 横スクロールが出ないようにする */
+            height: auto;  /* 高さは自動調整 */
             border: 0;
             overflow: hidden;
         }
@@ -244,15 +245,15 @@
         @media (max-width: 600px) {
             .graph-container iframe {
                 width: 100%; /* 幅に合わせて調整 */
-                height: 300px; /* 画面が小さい場合の高さを縮小 */
-                min-width: 100%; /* 横スクロールバーを出さないようにする */
+                max-width: 100%; /* 横スクロールバーを出さないようにする */
+                height: 300px; /* 画面が小さい場合の高さ */
             }
         }
         
         @media (max-width: 400px) {
             .graph-container iframe {
                 width: 100%; /* 幅に合わせて調整 */
-                height: 250px; /* さらに小さい場合の高さを縮小 */
+                height: 250px; /* さらに小さい場合の高さ */
             }
         }
 
