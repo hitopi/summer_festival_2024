@@ -8,187 +8,209 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
     
-        /* 背景色とフォントの設定 */
-        body {
-            font-family: 'Sawarabi Mincho', serif;
-            margin: 20px;
-            background: linear-gradient(180deg, #FFB74D 0%, #4A148C 100%);
-        }
+    /* 背景色とフォントの設定 */
+    body {
+        font-family: 'Sawarabi Mincho', serif;
+        margin: 20px;
+        background: linear-gradient(180deg, #FFB74D 0%, #4A148C 100%);
+    }
     
-        /* コンテンツの全体的な枠組み */
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-        }
+    /* コンテンツの全体的な枠組み */
+    .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+    }
     
-        /* ヘッダーのスタイル */
-        .header {
-            position: relative;
-            text-align: center;
-            color: white;
-            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 250px;
-            border-radius: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            overflow: hidden;
-        }
+    /* ヘッダーのスタイル */
+    .header {
+        position: relative;
+        text-align: center;
+        color: white;
+        background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E8%83%8C%E6%99%AF.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 250px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+    }
     
-        /* 背景画像の上に黒を半透明で重ねる */
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* 黒を半透明に設定 */
-            z-index: 0; /* 背景の下に配置 */
-        }
+    /* 背景画像の上に黒を半透明で重ねる */
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* 黒を半透明に設定 */
+        z-index: 0; /* 背景の下に配置 */
+    }
     
-        /* メインタイトル、サブタイトル、カウントダウンの共通光のエフェクト */
-        .header .title, .header .subtitle, .header .countdown {
-            text-shadow: 0 0 10px rgba(255, 223, 0, 0.85); /* 光のエフェクトを追加 */
-            position: relative;
-            z-index: 1; /* 黒のオーバーレイの上に表示 */
-        }
+    /* メインタイトル、サブタイトル、カウントダウンの共通光のエフェクト */
+    .header .title, .header .subtitle, .header .countdown {
+        text-shadow: 0 0 10px rgba(255, 223, 0, 0.85); /* 光のエフェクトを追加 */
+        position: relative;
+        z-index: 1; /* 黒のオーバーレイの上に表示 */
+    }
     
-        /* メインタイトルのスタイル */
-        .header .title {
-            margin: 0;
-            color: #ffffff;
-            text-align: center;
-            font-size: clamp(30px, 10vw, 64px); /* ジャンプ率を高めた見出しサイズ */
-        }
+    /* メインタイトルのスタイル */
+    .header .title {
+        margin: 0;
+        color: #ffffff;
+        text-align: center;
+        font-size: clamp(30px, 10vw, 64px); /* ジャンプ率を高めた見出しサイズ */
+    }
     
-        /* サブタイトルのスタイル */
-        .header .subtitle {
-            margin-top: 10px;
-            color: #ffffff;
-            text-align: center;
-            font-size: clamp(18px, 6vw, 32px); /* ジャンプ率高め */
-        }
+    /* サブタイトルのスタイル */
+    .header .subtitle {
+        margin-top: 10px;
+        color: #ffffff;
+        text-align: center;
+        font-size: clamp(18px, 6vw, 32px); /* ジャンプ率高め */
+    }
     
-        /* カウントダウンのスタイル */
-        .header .countdown {
-            margin-top: 10px;
-            color: #ffffff;
-            text-align: center;
-            font-size: clamp(18px, 5vw, 28px); /* 少し控えめなジャンプ率 */
-        }
+    /* カウントダウンのスタイル */
+    .header .countdown {
+        margin-top: 10px;
+        color: #ffffff;
+        text-align: center;
+        font-size: clamp(18px, 5vw, 28px); /* 少し控えめなジャンプ率 */
+    }
     
-        /* 各セクションのスタイル */
-        .section {
-            margin-bottom: 30px;
-        }
+    /* 各セクションのスタイル */
+    .section {
+        margin-bottom: 30px;
+    }
     
-        /* セクションの見出し */
-        .section h3 {
-            font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
+    /* セクションの見出し */
+    .section h3 {
+        font-size: clamp(16px, 5vw, 24px); /* ジャンプ率を意識したサイズ設定 */
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
     
-        /* セクションの本文 */
-        .section p {
-            font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
-            line-height: 1.6;
-        }
+    /* セクションの本文 */
+    .section p {
+        font-size: clamp(12px, 3vw, 18px); /* 本文のサイズ */
+        line-height: 1.6;
+    }
     
-        /* テキストと画像の配置 */
+    /* テキストと画像の配置 */
+    .split {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        position: relative;
+        overflow: hidden;
+        background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%882.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+    }
+    
+    /* 背景画像を白く濁すためのオーバーレイ */
+    .split::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.15); /* 透明度を調整 */
+        z-index: 0; /* 背景の下に配置 */
+    }
+    
+    /* 画像のスタイル */
+    /* 円形の画像 */
+    .circle-image img {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 50%; /* 画像を円形にする */
+        box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
+    }
+    
+    /* 四角の画像 */
+    .square-image img {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
+        box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 四角のまま光のエフェクト */
+    }
+    
+    /* テキストのスタイル */
+    .text {
+        width: 55%;
+        padding: 10px;
+        color: white;
+        z-index: 1; /* オーバーレイの上に表示 */
+    }
+    
+    /* 注意文のスタイル */
+    .note {
+        font-size: clamp(12px, 2.5vw, 16px);
+        color: red;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(255, 200, 0, 0.4); /* 黄色の光のエフェクト */
+    }
+    
+    /* リンクやボタンのスタイル */
+    a {
+        background-color: #FF5722;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border: 2px solid #E64A19;
+    }
+    
+    /* リンクホバー時のスタイル */
+    a:hover {
+        background-color: #D84315;
+    }
+    
+    /* 赤い文字のクラス */
+    .red-text {
+        color: red;
+    }
+    
+    /* メディアクエリ - 画面幅が600px以下の場合 */
+    @media (max-width: 600px) {
         .split {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-            position: relative;
-            overflow: hidden;
-            background-image: url('https://github.com/hitopi/summer_festival_2024/raw/main/%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%882.png');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
+            flex-direction: column;
+            align-items: flex-start;
         }
     
-        /* 背景画像を白く濁すためのオーバーレイ */
-        .split::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.15); /* 透明度を調整 */
-            z-index: 0; /* 背景の下に配置 */
-        }
-    
-        /* 画像のスタイル */
-        /* 円形の画像 */
-        .circle-image img {
-            width: 100%;
-            height: auto;
-            max-height: 150px;
-            object-fit: cover;
-            border-radius: 50%; /* 画像を円形にする */
-            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 光のエフェクト */
-        }
-        
-        /* 四角の画像 */
-        .square-image img {
-            width: 100%;
-            height: auto;
-            max-height: 150px;
-            object-fit: contain;
-            box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* 四角のまま光のエフェクト */
-        }
-    
-        /* テキストのスタイル */
         .text {
-            width: 55%;
-            padding: 10px;
-            color: white;
-            z-index: 1; /* オーバーレイの上に表示 */
+            width: 100%;
+            margin-bottom: 10px; /* textの下に余白を追加 */
         }
     
-        /* 注意文のスタイル */
-        .note {
-            font-size: clamp(12px, 2.5vw, 16px);
-            color: red;
-            font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 200, 0, 0.4); /* 黄色の光のエフェクト */
+        .circle-image, .square-image {
+            width: 100%;
+            text-align: center;
         }
     
-        /* リンクやボタンのスタイル */
-        a {
-            background-color: #FF5722;
-            padding: 10px;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            border: 2px solid #E64A19;
+        .circle-image img, .square-image img {
+            width: 50%; /* 画像の横幅を縮小 */
         }
-    
-        /* リンクホバー時のスタイル */
-        a:hover {
-            background-color: #D84315;
-        }
-    
-        /* 赤い文字のクラス */
-        .red-text {
-            color: red;
-        }
+    }
     </style>
 
     </head>
